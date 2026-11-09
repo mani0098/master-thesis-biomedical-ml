@@ -2,6 +2,8 @@
 
 ### Master's Thesis | Universitat Politècnica de Catalunya (UPC) & Norwegian University of Science and Technology (NTNU) | 2020
 
+**📄 [Read the Complete Thesis — Official UPC PDF](https://upcommons.upc.edu/bitstreams/7396bdb9-5e6c-4f97-929a-51fc2c5ddb6f/download)** · [UPC publication record](https://upcommons.upc.edu/entities/publication/b424e102-8063-4b25-a467-633a4358bc51)
+
 ## 📌 Overview
 
 This master's thesis investigates the application of **machine learning to ICU mortality prediction**, focusing on the relationship between blood glucose, lactate levels, and patient outcomes.
@@ -30,6 +32,10 @@ The project combines large-scale clinical data processing, feature extraction, e
 | Machine Learning | Compared seven classification algorithms using repeated cross-validation. |
 | Model Evaluation | Assessed accuracy, ROC-AUC, precision, recall, F1-score, Cohen's Kappa, and computational complexity. |
 
+![Cohort selection process](fig/chapter3/Cohort%20Selection%20Process.jpg)
+
+*Figure: Patient cohort selection from the eICU-CRD dataset (original thesis).*
+
 ## 🤖 Machine Learning Models
 
 Seven classification algorithms were investigated:
@@ -55,6 +61,10 @@ Seven classification algorithms were investigated:
 
 The experiments also highlighted the impact of class imbalance, resampling techniques, and computational complexity on model evaluation.
 
+![Algorithm comparison using SMOTE and repeated stratified cross-validation](fig/chapter5/Algorithm%20Comparison%20%28SMOTE%2C%20RSKFold%29.png)
+
+*Figure: Comparison of classification algorithms after applying SMOTE, as reported in the thesis.*
+
 *Results reflect the retrospective experimental methodology described in the 2020 thesis. They do not establish prospective clinical performance or readiness for deployment.*
 
 ## 🛠️ Technologies & Tools
@@ -69,10 +79,33 @@ The experiments also highlighted the impact of class imbalance, resampling techn
 
 **Documentation:** LaTeX
 
+## 📁 Repository Structure
+
+This repository preserves the **editable LaTeX thesis source** and its original figures:
+
+| File / Directory | Description |
+|---|---|
+| [`main.tex`](main.tex) | Main document that assembles the thesis chapters |
+| [`TexFiles/`](TexFiles/) | Abstract, chapters, conclusions, glossary, and supporting LaTeX files |
+| [`TexFiles/mylib.bib`](TexFiles/mylib.bib) | Bibliographic references |
+| [`TexFiles/sty.sty`](TexFiles/sty.sty) | Document formatting and LaTeX packages |
+| [`fig/`](fig/) | Figures, diagrams, and evaluation plots |
+| [`TitlePage.pdf`](TitlePage.pdf) | Title page only, **not** the full thesis |
+
+Start with [`main.tex`](main.tex) to inspect or edit the document. Keep the relative structure of `TexFiles/` and `fig/` intact so the LaTeX references continue to work. The **official UPC PDF linked at the top** is the published, complete thesis.
+
 ## 📂 Thesis & Resources
 
 - 📄 [Complete Master's Thesis — Official UPC Repository](https://upcommons.upc.edu/bitstreams/7396bdb9-5e6c-4f97-929a-51fc2c5ddb6f/download)
 - 💻 [Associated Machine Learning Code](https://github.com/mani0098/GlucoseLactateMortality)
+
+## 🔗 Related Work — IT Academy Final Project (2026)
+
+Six years later, I revisited **eICU-CRD v2.0** for a different clinical prediction task: identifying lung cancer patients at risk of a **prolonged ICU stay (>5 days)** using data available during the **first 24 hours** of admission.
+
+[Explore the 2026 project: Early Prediction of Prolonged ICU Stay in Lung Cancer Patients](https://github.com/mani0098/ITA_Data_Analytics/tree/main/Sprint%2013.%20Final%20project)
+
+The two projects illustrate a progression from biomarker-based mortality prediction to early risk stratification for ICU length of stay.
 
 ## 🔒 Data Availability
 
